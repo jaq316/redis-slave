@@ -3,7 +3,8 @@ FROM redis:latest
 EXPOSE 6379
 
 VOLUME ["/data"]
-ADD https://raw.githubusercontent.com/jaq316/redis-slave/master/start-redis-slave.sh /start-redis-slave.sh
+# ADD https://raw.githubusercontent.com/jaq316/redis-slave/master/start-redis-slave.sh /start-redis-slave.sh
+COPY start-redis-slave.sh /start-redis-slave.sh
 
 RUN chmod +x /start-redis-slave.sh
 
